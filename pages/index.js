@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import copy from 'copy-to-clipboard';
 
 const Index = () => {
     const [videoURL, setVideoURL] = useState('');
@@ -34,10 +33,15 @@ const Index = () => {
     };
 
     const downloadThumbnail = (url) => {
-        const anchor = document.createElement('a');
-        anchor.href = url;
-        anchor.download = 'thumbnail.jpg';
-        anchor.click();
+        fetch(url)
+            .then((response) => response.blob())
+            .then((blob) => {
+                const blobURL = URL.createObjectURL(blob);
+                const anchor = document.createElement('a');
+                anchor.href = blobURL;
+                anchor.download = 'thumbnail.jpg';
+                anchor.click();
+            });
     };
 
     return (
