@@ -17,12 +17,13 @@ const Index = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8 flex flex-col justify-center items-center">
+        <div className="container mx-auto px-4 py-8 flex flex-col items-center">
             <header className="text-center mb-8">
                 <h1 className="text-3xl font-bold mb-2">Youtube Thumbnail Downloader</h1>
                 <p className="text-gray-600 intro-text">Download high-quality thumbnails from YouTube videos.</p>
             </header>
-            <div className="text-center">
+
+            <div className="flex flex-col items-center mb-8">
                 <input
                     type="text"
                     className="w-full md:w-1/2 px-4 py-2 border rounded"
@@ -31,17 +32,30 @@ const Index = () => {
                     onChange={(e) => setVideoURL(e.target.value)}
                 />
                 <br />
-                <button className="btn-blue mt-2" onClick={() => getYouTubeThumbnail(videoURL)}>
-                    Download Thumbnails
+                <button
+                    className="btn-blue mt-2"
+                    onClick={() => {
+                        if (thumbnailOptions.length === 0) {
+                            getYouTubeThumbnail(videoURL);
+                        } else {
+                            // Handle logic when thumbnail options are present
+                            // e.g., open modal, show message, etc.
+                        }
+                    }}
+                >
+                    {thumbnailOptions.length === 0 ? 'Download Thumbnails' : 'Processing...'}
                 </button>
             </div>
-            <div className="flex-grow" />
+
             {thumbnailOptions.length > 0 && (
                 <div className="mt-8">
                     {/* Thumbnail Options */}
                     {/* ... (existing thumbnail options rendering logic) */}
                 </div>
             )}
+
+            <div className="flex-grow" />
+
             {/* How to use our website section */}
             <section className="mt-8 flex flex-col items-center">
                 <h2 className="text-2xl font-semibold mb-4 text-center">How to Use Our Website</h2>
