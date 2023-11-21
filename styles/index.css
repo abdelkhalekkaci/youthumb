@@ -1,9 +1,4 @@
-/* Existing CSS remains unchanged, add or modify the following styles */
-
-/* Style the introductory text */
-.intro-text {
-    margin-bottom: 20px; /* Add space between intro text and URL field */
-}
+/* Existing CSS remains unchanged, modify or add the following styles */
 
 /* Center-align text */
 .text-center {
@@ -38,11 +33,16 @@ input[type="text"],
         background-color: #cc0000;
     }
 
-/* Add styles for the thumbnail options */
-.thumbnail-option {
-    /* Existing styles... */
+/* Add styles for the "How to use" section */
+section {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    background-color: #f9f9f9;
 }
 
-    .thumbnail-option button {
-        /* Existing styles... */
+    section h2 {
+        margin-bottom: 10px;
     }
