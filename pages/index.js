@@ -16,6 +16,15 @@ const Index = () => {
         // ... (existing logic remains unchanged)
     };
 
+    const handleDownloadClick = () => {
+        if (thumbnailOptions.length === 0) {
+            getYouTubeThumbnail(videoURL);
+        } else {
+            // Handle logic when thumbnail options are present
+            // e.g., open modal, show message, etc.
+        }
+    };
+
     return (
         <div className="container mx-auto px-4 py-8 flex flex-col items-center">
             <header className="text-center mb-8">
@@ -34,14 +43,7 @@ const Index = () => {
                 <br />
                 <button
                     className="btn-blue mt-2"
-                    onClick={() => {
-                        if (thumbnailOptions.length === 0) {
-                            getYouTubeThumbnail(videoURL);
-                        } else {
-                            // Handle logic when thumbnail options are present
-                            // e.g., open modal, show message, etc.
-                        }
-                    }}
+                    onClick={handleDownloadClick}
                 >
                     {thumbnailOptions.length === 0 ? 'Download Thumbnails' : 'Processing...'}
                 </button>
