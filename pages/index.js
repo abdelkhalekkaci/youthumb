@@ -3,7 +3,6 @@ import { useState } from 'react';
 const Index = () => {
     const [videoURL, setVideoURL] = useState('');
     const [thumbnailOptions, setThumbnailOptions] = useState([]);
-    const [selectedThumbnail, setSelectedThumbnail] = useState(null);
 
     const getYouTubeThumbnail = (url) => {
         // ... (existing logic remains unchanged)
@@ -16,12 +15,17 @@ const Index = () => {
         anchor.click();
     };
 
+    const handleThumbnailClick = (url) => {
+        // ... (existing logic remains unchanged)
+    };
+
     return (
         <div className="container mx-auto px-4 py-8">
             <header className="text-center mb-8">
                 <h1 className="text-3xl font-bold mb-2">Youtube Thumbnail Downloader</h1>
                 <p className="text-gray-600">Download high-quality thumbnails from YouTube videos.</p>
             </header>
+           
             <div className="text-center">
                 <input
                     type="text"
@@ -43,7 +47,7 @@ const Index = () => {
                                 <img
                                     src={option.url}
                                     alt={`Thumbnail ${index + 1}`}
-                                    onClick={() => setSelectedThumbnail(option.url)} // Updated to set the selected thumbnail
+                                    onClick={() => handleThumbnailClick(option.url)}
                                 />
                                 <button
                                     className="btn-blue mt-2"
@@ -56,19 +60,16 @@ const Index = () => {
                     </div>
                 </div>
             )}
-
             {/* How to use our website section */}
-            {selectedThumbnail && (
-                <section className="mt-8">
-                    <h2 className="text-2xl font-semibold mb-4">How to Use Our Website</h2>
-                    <p className="text-gray-700">
-                        To download a thumbnail,
-                        first, enter a valid YouTube video URL in the input field above and click the "Download Thumbnails" button.
-                        Once the thumbnail options appear below, click the "Download Image" button below the desired thumbnail to start the download.
-                        To download the displayed thumbnail, right-click the image and select "Save image as..." from the context menu to save it to your device.
-                    </p>
-                </section>
-            )}
+            <section className="mt-8">
+                <h2 className="text-2xl font-semibold mb-4">How to Use Our Website</h2>
+                <p className="text-gray-700">
+                    To download a thumbnail,
+                    first, enter a valid YouTube video URL in the input field above and click the "Download Thumbnails" button.
+                    Once the thumbnail options appear below, click the "Download Image" button below the desired thumbnail to start the download.
+                    To download the displayed thumbnail, right-click the image and select "Save image as..." from the context menu to save it to your device.
+                </p>
+            </section>
         </div>
     );
 };
