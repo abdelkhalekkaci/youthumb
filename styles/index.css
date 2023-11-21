@@ -2,8 +2,8 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0;
+    padding: 0;
 }
 
 /* Center align the content in the container */
@@ -13,7 +13,13 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 20px; /* Add padding for better spacing */
+    padding: 20px;
+    text-align: center; /* Center-align text */
+}
+
+/* Style the introductory text */
+.intro-text {
+    margin-bottom: 20px; /* Add space between intro text and URL field */
 }
 
 /* Style the input for the YouTube URL */
@@ -21,29 +27,29 @@ input[type="text"] {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: calc(100% - 12px); /* Adjust width to match button's width */
-    max-width: 300px; /* Limit maximum width for better appearance */
-    margin-bottom: 10px; /* Add space between input and button */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    width: calc(100% - 12px);
+    max-width: 300px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 /* Style the "Download Thumbnails" button */
 .btn-blue {
-    background-color: red; /* Change button color to red */
+    background-color: red;
     color: white;
     font-weight: bold;
-    padding: 0.5rem; /* Adjust button padding */
-    border: none; /* Remove button border */
+    padding: 0.5rem;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
-    width: 100%; /* Make button width match input */
-    max-width: 300px; /* Limit button width for better appearance */
-    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
     .btn-blue:hover {
-        background-color: #cc0000; /* Darken button color on hover */
+        background-color: #cc0000;
     }
 
 /* Style the thumbnail options */
@@ -54,31 +60,25 @@ input[type="text"] {
     padding: 1rem;
     text-align: center;
     transition: box-shadow 0.2s;
-    margin-bottom: 10px; /* Add space between thumbnail options */
+    margin-bottom: 10px;
 }
 
     .thumbnail-option:hover {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* Style the images within thumbnail options */
-    .thumbnail-option img {
-        max-width: 100%;
-        height: auto;
-    }
-
     /* Style the "Download Image" button */
     .thumbnail-option button {
-        background-color: red; /* Change button color to red */
+        background-color: red;
         color: white;
         font-weight: bold;
         padding: 0.3rem 0.6rem;
-        border: none; /* Remove button border */
+        border: none;
         border-radius: 4px;
         cursor: pointer;
         transition: background-color 0.2s;
     }
 
         .thumbnail-option button:hover {
-            background-color: #cc0000; /* Darken button color on hover */
+            background-color: #cc0000;
         }
