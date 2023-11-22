@@ -20,7 +20,7 @@ const Index = () => {
             const blob = await response.blob();
             const blobURL = URL.createObjectURL(blob);
 
-            // Create an anchor element and trigger the download
+            // Create an anchor element, set attributes, and trigger the click event
             const anchor = document.createElement('a');
             anchor.href = blobURL;
             anchor.download = 'thumbnail.jpg';
