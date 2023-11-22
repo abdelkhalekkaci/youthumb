@@ -4,9 +4,18 @@ const Index = () => {
     const [videoURL, setVideoURL] = useState('');
     const [thumbnailOptions, setThumbnailOptions] = useState([]);
     const [error, setError] = useState(null);
+    const [fullscreenImage, setFullscreenImage] = useState(null);
 
     const getYouTubeThumbnail = (url) => {
         // ... (existing logic remains unchanged)
+    };
+
+    const showFullScreen = (url) => {
+        setFullscreenImage(url);
+    };
+
+    const hideFullScreen = () => {
+        setFullscreenImage(null);
     };
 
     const downloadThumbnail = async (url) => {
@@ -59,8 +68,21 @@ const Index = () => {
                                 <button className="btn-blue mt-2" onClick={() => downloadThumbnail(option.url)}>
                                     Download Image
                                 </button>
+                                <button className="btn-blue mt-2" onClick={() => showFullScreen(option.url)}>
+                                    Fullscreen
+                                </button>
                             </div>
                         ))}
+                    </div>
+                </div>
+            )}
+            {fullscreenImage && (
+                <div className="fullscreen-container">
+                    <div className="fullscreen-content">
+                        <img src={fullscreenImage} alt="Fullscreen Thumbnail" />
+                        <button className="btn-blue mt-2" onClick={hideFullScreen}>
+                            Close Fullscreen
+                        </button>
                     </div>
                 </div>
             )}
