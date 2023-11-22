@@ -1,67 +1,84 @@
-/* CSS */
+/* Set the base font and background color for the entire app */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
+    margin: 0;
+    padding: 0;
 }
 
+/* Center align the content in the container */
 .container {
-    width: 80%;
-    max-width: 1200px;
-    padding: 0 20px;
-}
-
-.center-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center; /* Center-align text */
 }
 
-.input-field {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    margin-bottom: 10px;
+/* Style the introductory text */
+.intro-text {
+    margin-bottom: 20px; /* Add space between intro text and URL field */
+}
+
+/* Style the input for the YouTube URL */
+input[type="text"] {
+    padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
+    width: calc(100% - 12px);
+    max-width: 300px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
+/* Style the "Download Thumbnails" button */
 .btn-blue {
     background-color: red;
     color: white;
     font-weight: bold;
-    padding: 10px;
+    padding: 0.5rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
+    width: 100%;
+    max-width: 300px;
+    box-sizing: border-box;
 }
 
     .btn-blue:hover {
         background-color: #cc0000;
     }
 
-.thumbnail-options {
-    /* Add styles for thumbnail options */
-}
-
-.how-to-use {
+/* Style the thumbnail options */
+.thumbnail-option {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 1rem;
     text-align: center;
-}
-
-.how-to-use-header {
-    font-size: 24px;
-    font-weight: bold;
+    transition: box-shadow 0.2s;
     margin-bottom: 10px;
 }
 
-.how-to-use-text {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.5;
-}
+    .thumbnail-option:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style the "Download Image" button */
+    .thumbnail-option button {
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        padding: 0.3rem 0.6rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+        .thumbnail-option button:hover {
+            background-color: #cc0000;
+        }

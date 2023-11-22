@@ -3,63 +3,89 @@ import { useState } from 'react';
 const Index = () => {
     const [videoURL, setVideoURL] = useState('');
     const [thumbnailOptions, setThumbnailOptions] = useState([]);
+    const [error, setError] = useState(null);
 
     const getYouTubeThumbnail = (url) => {
-        // Logic to fetch YouTube thumbnails
-    };
+        let regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
+        let match = url.match(regExp);
 
-    const downloadThumbnail = (url) => {
-        // Logic to download thumbnails
-    };
+        if (match && match[1].length === 11) {
+            const videoID = match[1];
+            const thumbnailBaseUrl = 'http://img.youtube.com/vi/';
 
-    const handleThumbnailClick = (url) => {
-        // Logic to handle thumbnail click
-    };
+            const options = [
+                { resolution: 'HD (1280x720)', code: 'maxresdefault' },
+                { resolution: 'SD (640x480)', code: 'sddefault' },
+                { resolution: 'Normal (480x360)', code: 'hqdefault' },
+                { resolution: 'Medium (320x180)', code: 'mqdefault' },
+                { resolution: 'Low (120x90)', code: 'default' },
+            ];
 
-    const handleDownloadClick = () => {
-        if (thumbnailOptions.length === 0) {
-            getYouTubeThumbnail(videoURL);
+            const thumbnailOptions = options.map((option) => ({
+                resolution: option.resolution,
+                url: `${thumbnailBaseUrl}${videoID}/${option.code}.jpg`,
+            }));
+
+            setThumbnailOptions(thumbnailOptions);
+            setVideoURL('');
+            setError(null); // Clear previous errors if any
         } else {
-            // Logic when thumbnails are available
-            // downloadThumbnail(thumbnailOptions[0].url);
+            setThumbnailOptions([]);
+        }
+    };
+
+    const downloadThumbnail = async (url) => {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const blob = await response.blob();
+            const blobURL = URL.createObjectURL(blob);
+            const anchor = document.createElement('a');
+            anchor.href = blobURL;
+            anchor.download = 'thumbnail.jpg';
+            anchor.click();
+        } catch (error) {
+            setError('Error downloading thumbnail. Please try again.'); // Set error state
+            console.error('Error downloading thumbnail:', error);
         }
     };
 
     return (
-        <div className="container">
+        <div className="container mx-auto px-4 py-8">
             <header className="text-center mb-8">
                 <h1 className="text-3xl font-bold mb-2">Youtube Thumbnail Downloader</h1>
-                <p className="text-gray-600 intro-text">Download high-quality thumbnails from YouTube videos.</p>
+                <p className="text-gray-600">Download high-quality thumbnails from YouTube videos.</p>
             </header>
-
-            <div className="center-content">
+            <div className="text-center">
                 <input
                     type="text"
-                    className="input-field"
+                    className="w-full md:w-1/2 px-4 py-2 border rounded"
                     placeholder="Enter YouTube URL"
                     value={videoURL}
                     onChange={(e) => setVideoURL(e.target.value)}
                 />
-                <button className="btn-blue" onClick={handleDownloadClick}>
-                    {thumbnailOptions.length === 0 ? 'Download Thumbnails' : 'Processing...'}
+                <button className="btn-blue mt-2" onClick={() => getYouTubeThumbnail(videoURL)}>
+                    Download Thumbnails
                 </button>
             </div>
-
             {thumbnailOptions.length > 0 && (
-                <div className="thumbnail-options">
-                    {/* Render thumbnail options */}
+                <div className="mt-8">
+                    <h2 className="text-xl font-semibold mb-4">Thumbnail Options</h2>
+                    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        {thumbnailOptions.map((option, index) => (
+                            <div key={index} className="thumbnail-option">
+                                <img src={option.url} alt={`Thumbnail ${index + 1}`} />
+                                <button className="btn-blue mt-2" onClick={() => downloadThumbnail(option.url)}>
+                                    Download Image
+                                </button>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
-
-            <section className="how-to-use">
-                <h2 className="how-to-use-header">How to Use Our Website</h2>
-                <p className="how-to-use-text">
-                    To download a thumbnail,<br />
-                    First, enter a valid YouTube video URL in the input field above and click the "Download Thumbnails" button.<br />
-                    Once the thumbnail options appear below, click the "Download Image" button below the desired thumbnail to start the download.<br />
-                    To download the displayed thumbnail, right-click the image and select "Save image as..." from the context menu to save it to your device.
-                </p>
-            </section>
+            {error && <p className="text-red-500">{error}</p>} {/* Display error message if there's an error */}
         </div>
     );
 };
