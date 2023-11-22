@@ -85,7 +85,7 @@ input[type="text"] {
 
 /* Updated styles for "How to Use Our Website" section */
 .how-to-section {
-    background-color: #f5f5f5;
+    background-color: #FB7979;
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
@@ -97,7 +97,7 @@ input[type="text"] {
     }
 
     .how-to-section p {
-        text-align: left;
+        text-align: center;
         line-height: 1.6;
         margin-bottom: 10px;
     }
