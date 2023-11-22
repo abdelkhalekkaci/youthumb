@@ -73,9 +73,10 @@ const Index = () => {
                     </div>
                 </div>
             )}
-            <section className="mt-8 text-center">
-                <h2 className="text-2xl font-semibold mb-4">How to Use Our Website</h2>
-                <p className="text-gray-700">
+            {/* Updated section with new styling */}
+            <section className="how-to-section" style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px' }}>
+                <h2 className="text-2xl font-semibold mb-4" style={{ fontSize: '20px', marginBottom: '15px' }}>How to Use Our Website</h2>
+                <p className="text-gray-700" style={{ textAlign: 'left', lineHeight: '1.6', marginBottom: '10px' }}>
                     To download a thumbnail,<br />
                     First, enter a valid YouTube video URL in the input field above and click the "Download Thumbnails" button.<br />
                     Once the thumbnail options appear below, click the "Download Image" button below the desired thumbnail to start the download.<br />

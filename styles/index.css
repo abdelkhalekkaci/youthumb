@@ -82,3 +82,22 @@ input[type="text"] {
         .thumbnail-option button:hover {
             background-color: #cc0000;
         }
+
+/* Updated styles for "How to Use Our Website" section */
+.how-to-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+    .how-to-section h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .how-to-section p {
+        text-align: left;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
