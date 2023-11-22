@@ -37,15 +37,24 @@ const Index = () => {
     const downloadThumbnail = async (url) => {
         try {
             const response = await fetch(url);
+
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+                throw new Error(`Failed to download thumbnail (${response.status} ${response.statusText})`);
             }
-            const blob = await response.blob();
-            const blobURL = URL.createObjectURL(blob);
-            const anchor = document.createElement('a');
-            anchor.href = blobURL;
-            anchor.download = 'thumbnail.jpg';
-            anchor.click();
+
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.startsWith('image')) {
+                const blob = await response.blob();
+                const blobURL = URL.createObjectURL(blob);
+                const anchor = document.createElement('a');
+                anchor.href = blobURL;
+                anchor.download = 'thumbnail.jpg';
+                anchor.click();
+            } else {
+                throw new Error('Downloaded file is not an image');
+            }
+
+            setError(null); // Clear any previous errors
         } catch (error) {
             setError('Error downloading thumbnail. Please try again.'); // Set error state
             console.error('Error downloading thumbnail:', error);
