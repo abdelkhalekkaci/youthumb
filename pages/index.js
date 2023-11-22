@@ -5,23 +5,23 @@ const Index = () => {
     const [thumbnailOptions, setThumbnailOptions] = useState([]);
 
     const getYouTubeThumbnail = (url) => {
-        // ... (existing logic remains unchanged)
+        // Logic to fetch YouTube thumbnails
     };
 
     const downloadThumbnail = (url) => {
-        // ... (existing logic remains unchanged)
+        // Logic to download thumbnails
     };
 
     const handleThumbnailClick = (url) => {
-        // ... (existing logic remains unchanged)
+        // Logic to handle thumbnail click
     };
 
     const handleDownloadClick = () => {
         if (thumbnailOptions.length === 0) {
             getYouTubeThumbnail(videoURL);
         } else {
-            // Handle logic when thumbnail options are present
-            // e.g., open modal, show message, etc.
+            // Logic when thumbnails are available
+            // downloadThumbnail(thumbnailOptions[0].url);
         }
     };
 
@@ -51,14 +51,12 @@ const Index = () => {
 
             {thumbnailOptions.length > 0 && (
                 <div className="mt-8">
-                    {/* Thumbnail Options */}
-                    {/* ... (existing thumbnail options rendering logic) */}
+                    {/* Render thumbnail options */}
                 </div>
             )}
 
             <div className="flex-grow" />
 
-            {/* How to use our website section */}
             <section className="mt-8 flex flex-col items-center">
                 <h2 className="text-2xl font-semibold mb-4 text-center">How to Use Our Website</h2>
                 <p className="text-gray-700 text-center">
