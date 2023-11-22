@@ -28,15 +28,26 @@ const Index = () => {
             URL.revokeObjectURL(blobURL);
             setError(null); // Clear any previous errors
         } catch (error) {
-            setError(`Error downloading thumbnail: ${error.message}`); // Set error state with more details
+            setError(`Error downloading thumbnail: ${error.message}`);
             console.error('Error downloading thumbnail:', error);
         }
     };
 
     return (
         <div className="container mx-auto px-4 py-8 text-center">
-            {/* Existing code for header, input field, and thumbnailOptions */}
-            {/* ... */}
+            {/* Header, input field, and other content */}
+            <div className="text-center">
+                <input
+                    type="text"
+                    className="w-full md:w-1/2 px-4 py-2 border rounded"
+                    placeholder="Enter YouTube URL"
+                    value={videoURL}
+                    onChange={(e) => setVideoURL(e.target.value)}
+                />
+                <button className="btn-blue mt-2" onClick={() => getYouTubeThumbnail(videoURL)}>
+                    Download Thumbnails
+                </button>
+            </div>
 
             {thumbnailOptions.length > 0 && (
                 <div className="mt-8">
