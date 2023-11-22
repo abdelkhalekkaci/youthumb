@@ -1,48 +1,67 @@
-/* Existing CSS remains unchanged, modify or add the following styles */
-
-/* Center-align text */
-.text-center {
-    text-align: center;
+/* CSS */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7fafc;
 }
 
-/* Adjust input and button styles */
-input[type="text"],
-.btn-blue {
-    width: calc(100% - 12px);
-    max-width: 300px;
+.container {
+    width: 80%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
     margin-bottom: 10px;
-    padding: 0.5rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
 }
 
 .btn-blue {
     background-color: red;
     color: white;
     font-weight: bold;
-    padding: 0.5rem;
+    padding: 10px;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
-    width: 100%;
-    max-width: 300px;
-    box-sizing: border-box;
 }
 
     .btn-blue:hover {
         background-color: #cc0000;
     }
 
-/* Add styles for the "How to use" section */
-section {
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    text-align: left;
-    background-color: #f9f9f9;
+.thumbnail-options {
+    /* Add styles for thumbnail options */
 }
 
-    section h2 {
-        margin-bottom: 10px;
-    }
+.how-to-use {
+    text-align: center;
+}
+
+.how-to-use-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.how-to-use-text {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
