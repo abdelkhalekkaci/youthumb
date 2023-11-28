@@ -85,11 +85,11 @@ input[type="text"] {
 
 /* Updated styles for "How to Use Our Website" section */
 .how-to-section {
-    background-color: #FB7979;
+    background-color: #f7f7ff;
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
-    border: 2px solid #FF0000; /* Red border with 2px width */
+    border: 1px solid #001011; /* Red border with 2px width */
 }
 
     .how-to-section h2 {
