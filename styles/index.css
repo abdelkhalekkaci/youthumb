@@ -84,12 +84,17 @@ input[type="text"] {
         }
 
 /* Updated styles for "How to Use Our Website" section */
+/* Updated styles for "How to Use Our Website" section */
 .how-to-section {
-    background-color: #f7f7ff;
+    background-color: #F0F8EA;
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
     border: 1px solid #001011; /* Red border with 2px width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
     .how-to-section h2 {
