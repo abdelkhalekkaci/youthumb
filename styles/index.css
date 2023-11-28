@@ -92,9 +92,9 @@ input[type="text"] {
     margin-top: 20px;
     border: 1px solid #001011; /* Red border with 2px width */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align:center;
 }
 
     .how-to-section h2 {
