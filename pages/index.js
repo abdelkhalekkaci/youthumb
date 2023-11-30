@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import copy from 'copy-to-clipboard';
 
 const Index = () => {
     const [videoURL, setVideoURL] = useState('');
@@ -37,7 +36,11 @@ const Index = () => {
         const anchor = document.createElement('a');
         anchor.href = url;
         anchor.download = 'thumbnail.jpg';
-        anchor.click();
+        anchor.dispatchEvent(new MouseEvent('click', {
+            bubbles: true,
+            cancelable: true,
+            view: window
+        }));
     };
 
     return (
