@@ -37,10 +37,10 @@ const Index = () => {
             const response = await fetch(url);
             const blob = await response.blob();
 
-            const link = document.createElement('a');
-            link.href = window.URL.createObjectURL(blob);
-            link.download = 'thumbnail.jpg';
-            link.click();
+            const anchor = document.createElement('a');
+            anchor.href = window.URL.createObjectURL(blob);
+            anchor.download = 'thumbnail.jpg';
+            anchor.click();
         } catch (error) {
             console.error('Error downloading thumbnail:', error);
         }
