@@ -36,8 +36,9 @@ const Index = () => {
         fetch(url)
             .then((res) => res.blob())
             .then((blob) => {
+                const url = window.URL.createObjectURL(new Blob([blob]));
                 const link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
+                link.href = url;
                 link.setAttribute('download', 'thumbnail.jpg');
                 document.body.appendChild(link);
                 link.click();
