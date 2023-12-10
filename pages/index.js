@@ -33,15 +33,10 @@ const Index = () => {
     };
 
     const downloadThumbnail = (url) => {
-        fetch(url)
-            .then((res) => res.blob())
-            .then((blob) => {
-                const a = document.createElement('a');
-                a.href = URL.createObjectURL(blob);
-                a.download = 'thumbnail.jpg';
-                a.click();
-            })
-            .catch((error) => console.error('Error downloading thumbnail:', error));
+        const link = document.createElement('a');
+        link.href = url;
+        link.setAttribute('download', 'thumbnail.jpg');
+        link.click();
     };
 
     return (
