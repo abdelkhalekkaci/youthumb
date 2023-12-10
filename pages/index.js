@@ -3,6 +3,7 @@ import { useState } from 'react';
 const Index = () => {
     const [videoURL, setVideoURL] = useState('');
     const [thumbnailOptions, setThumbnailOptions] = useState([]);
+    const [showThumbnailOptions, setShowThumbnailOptions] = useState(false);
 
     const getYouTubeThumbnail = (url) => {
         let regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
@@ -27,8 +28,10 @@ const Index = () => {
 
             setThumbnailOptions(thumbnailOptions);
             setVideoURL('');
+            setShowThumbnailOptions(true); // Show thumbnail options
         } else {
             setThumbnailOptions([]);
+            setShowThumbnailOptions(false); // Hide thumbnail options if URL is invalid
         }
     };
 
@@ -37,6 +40,10 @@ const Index = () => {
         link.href = url;
         link.setAttribute('download', 'thumbnail.jpg');
         link.click();
+    };
+
+    const handleBack = () => {
+        setShowThumbnailOptions(false); // Hide thumbnail options
     };
 
     return (
@@ -57,9 +64,12 @@ const Index = () => {
                     Download Thumbnails
                 </button>
             </div>
-            {thumbnailOptions.length > 0 && (
+            {showThumbnailOptions && thumbnailOptions.length > 0 && (
                 <div className="mt-8">
                     <h2 className="text-xl font-semibold mb-4">Thumbnail Options</h2>
+                    <button className="btn-blue mb-4" onClick={handleBack}>
+                        Back
+                    </button>
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {thumbnailOptions.map((option, index) => (
                             <div key={index} className="thumbnail-option">
