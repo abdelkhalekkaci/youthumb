@@ -3,7 +3,7 @@ import { useState } from 'react';
 const Index = () => {
     const [videoURL, setVideoURL] = useState('');
     const [thumbnailOptions, setThumbnailOptions] = useState([]);
-    const [showThumbnailOptions, setShowThumbnailOptions] = useState(false);
+    const [selectedThumbnail, setSelectedThumbnail] = useState(null);
 
     const getYouTubeThumbnail = (url) => {
         let regExp = /.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#\&\?]*).*/;
@@ -42,8 +42,12 @@ const Index = () => {
         link.click();
     };
 
-    const handleBack = () => {
-        setShowThumbnailOptions(false); // Hide thumbnail options
+    const handleThumbnailClick = (index) => {
+        setSelectedThumbnail(index);
+    };
+
+    const handleBackToThumbnails = () => {
+        setSelectedThumbnail(null);
     };
 
     return (
@@ -64,16 +68,32 @@ const Index = () => {
                     Download Thumbnails
                 </button>
             </div>
-            {showThumbnailOptions && thumbnailOptions.length > 0 && (
+            {selectedThumbnail !== null && (
+                <div className="fullscreen-thumbnail">
+                    <button className="btn-blue mb-4" onClick={handleBackToThumbnails}>
+                        Back to Thumbnails
+                    </button>
+                    <img src={thumbnailOptions[selectedThumbnail].url} alt={`Thumbnail ${selectedThumbnail + 1}`} />
+                    <button
+                        className="btn-blue mt-2"
+                        onClick={() => downloadThumbnail(thumbnailOptions[selectedThumbnail].url)}
+                        type="button"
+                    >
+                        Download Image
+                    </button>
+                </div>
+            )}
+            {thumbnailOptions.length > 0 && selectedThumbnail === null && (
                 <div className="mt-8">
                     <h2 className="text-xl font-semibold mb-4">Thumbnail Options</h2>
-                    <button className="btn-blue mb-4" onClick={handleBack}>
-                        Back
-                    </button>
                     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                         {thumbnailOptions.map((option, index) => (
                             <div key={index} className="thumbnail-option">
-                                <img src={option.url} alt={`Thumbnail ${index + 1}`} />
+                                <img
+                                    src={option.url}
+                                    alt={`Thumbnail ${index + 1}`}
+                                    onClick={() => handleThumbnailClick(index)}
+                                />
                                 <button
                                     className="btn-blue mt-2"
                                     onClick={() => downloadThumbnail(option.url)}
@@ -98,10 +118,9 @@ const Index = () => {
                     To download a thumbnail,<br />
                     First, enter a valid YouTube video URL in the input field above and click the "Download Thumbnails"
                     button.<br />
-                    Once the thumbnail options appear below, click the "Download Image" button below the desired thumbnail
-                    to start the download.<br />
-                    To download the displayed thumbnail, right-click the image and select "Save image as..." from the
-                    context menu to save it to your device.
+                    Once the thumbnail options appear below, click on a thumbnail to view it in full-screen mode. You can
+                    then click the "Download Image" button to download it. To return to the thumbnail options, click
+                    "Back to Thumbnails".
                 </p>
             </section>
         </div>
