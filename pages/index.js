@@ -32,12 +32,26 @@ const Index = () => {
         }
     };
 
-    const downloadThumbnail = (url) => {
-        const anchor = document.createElement('a');
-        anchor.href = url;
-        anchor.setAttribute('download', 'thumbnail.jpg');
-        anchor.click();
+    const downloadThumbnail = async (url) => {
+        try {
+            const response = await fetch(url);
+            const blob = await response.blob();
+            const objectUrl = URL.createObjectURL(blob);
+
+            const link = document.createElement('a');
+            link.href = objectUrl;
+            link.setAttribute('download', 'thumbnail.jpg');
+            document.body.appendChild(link);
+            link.click();
+
+            // Clean up
+            document.body.removeChild(link);
+            URL.revokeObjectURL(objectUrl);
+        } catch (error) {
+            console.error('Error downloading thumbnail:', error);
+        }
     };
+
 
     return (
         <div className="container mx-auto px-4 py-8">
