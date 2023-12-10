@@ -32,18 +32,11 @@ const Index = () => {
         }
     };
 
-    const downloadThumbnail = async (url) => {
-        try {
-            const response = await fetch(url);
-            const blob = await response.blob();
-
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'thumbnail.jpg';
-            a.click();
-        } catch (error) {
-            console.error('Error downloading thumbnail:', error);
-        }
+    const downloadThumbnail = (url) => {
+        const anchor = document.createElement('a');
+        anchor.href = url;
+        anchor.setAttribute('download', 'thumbnail.jpg');
+        anchor.click();
     };
 
     return (
