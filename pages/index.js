@@ -39,9 +39,7 @@ const Index = () => {
                 const a = document.createElement('a');
                 a.href = URL.createObjectURL(blob);
                 a.download = 'thumbnail.jpg';
-                document.body.appendChild(a);
                 a.click();
-                document.body.removeChild(a);
             })
             .catch((error) => console.error('Error downloading thumbnail:', error));
     };
@@ -71,7 +69,11 @@ const Index = () => {
                         {thumbnailOptions.map((option, index) => (
                             <div key={index} className="thumbnail-option">
                                 <img src={option.url} alt={`Thumbnail ${index + 1}`} />
-                                <button className="btn-blue mt-2" onClick={() => downloadThumbnail(option.url)}>
+                                <button
+                                    className="btn-blue mt-2"
+                                    onClick={() => downloadThumbnail(option.url)}
+                                    type="button"
+                                >
                                     Download Image
                                 </button>
                             </div>
@@ -80,13 +82,21 @@ const Index = () => {
                 </div>
             )}
             {/* Updated section with new styling */}
-            <section className="how-to-section" style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px' }}>
-                <h2 className="text-2xl font-semibold mb-4" style={{ fontSize: '20px', marginBottom: '15px' }}>How to Use Our Website</h2>
+            <section
+                className="how-to-section"
+                style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px' }}
+            >
+                <h2 className="text-2xl font-semibold mb-4" style={{ fontSize: '20px', marginBottom: '15px' }}>
+                    How to Use Our Website
+                </h2>
                 <p className="text-gray-700" style={{ textAlign: 'left', lineHeight: '1.6', marginBottom: '10px' }}>
                     To download a thumbnail,<br />
-                    First, enter a valid YouTube video URL in the input field above and click the "Download Thumbnails" button.<br />
-                    Once the thumbnail options appear below, click the "Download Image" button below the desired thumbnail to start the download.<br />
-                    To download the displayed thumbnail, right-click the image and select "Save image as..." from the context menu to save it to your device.
+                    First, enter a valid YouTube video URL in the input field above and click the "Download Thumbnails"
+                    button.<br />
+                    Once the thumbnail options appear below, click the "Download Image" button below the desired thumbnail
+                    to start the download.<br />
+                    To download the displayed thumbnail, right-click the image and select "Save image as..." from the
+                    context menu to save it to your device.
                 </p>
             </section>
         </div>
