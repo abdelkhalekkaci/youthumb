@@ -36,13 +36,10 @@ const Index = () => {
         fetch(url)
             .then((res) => res.blob())
             .then((blob) => {
-                const url = window.URL.createObjectURL(new Blob([blob]));
                 const link = document.createElement('a');
-                link.href = url;
-                link.setAttribute('download', 'thumbnail.jpg');
-                document.body.appendChild(link);
+                link.href = URL.createObjectURL(blob);
+                link.download = 'thumbnail.jpg';
                 link.click();
-                document.body.removeChild(link);
             })
             .catch((error) => console.error('Error downloading thumbnail:', error));
     };
