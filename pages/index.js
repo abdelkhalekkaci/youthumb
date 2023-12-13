@@ -107,7 +107,7 @@ const Index = () => {
                 className="how-to-section"
                 style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}
             >
-                <h2 className="text-3xl font-bold mb-4" style={{ fontSize: '3rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
+                <h2 className="text-1xl font-bold mb-4" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
                     How to Use Our Website
                 </h2>
                 <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
