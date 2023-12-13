@@ -3,8 +3,9 @@
     "",
     "\\pages",
     "\\public",
+    "\\public\\favicon",
     "\\styles"
   ],
-  "SelectedNode": "\\pages\\index.js",
+  "SelectedNode": "\\public",
   "PreviewInSolutionExplorer": false
 }

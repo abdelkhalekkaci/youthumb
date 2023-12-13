@@ -107,12 +107,12 @@ const Index = () => {
                 className="how-to-section"
                 style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}
             >
-                <h2 className="text-1xl font-bold mb-4" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
-                    How to Use Our Website
-                </h2>
+                
+                <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
+                    To acquire a thumbnail, follow these steps:
+                </h3>
                 <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
-                    To acquire a thumbnail, follow these steps:<br />
-
+ 
                     Enter a valid YouTube video URL into the provided input field.<br />
                     Click the "Download Thumbnails" button to generate thumbnail options.<br />
                     Once the thumbnail choices appear below, select your desired thumbnail by clicking the "View Fullscreen" button.<br />
