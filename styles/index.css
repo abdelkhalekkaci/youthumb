@@ -85,27 +85,27 @@ input[type="text"] {
 
 /* Updated styles for "How to Use Our Website" section */
 /* Updated styles for "How to Use Our Website" section */
+/* Updated styles for "How to Use Our Website" section */
 .how-to-section {
-    background-color: #F0F8EA;
+    background-color: #f5f5f5;
     padding: 20px;
     border-radius: 8px;
     margin-top: 20px;
     border: 1px solid #001011; /* Red border with 2px width */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align:center
+    text-align: center;
 }
 
     .how-to-section h2 {
-        font-size: 20px;
-        margin-bottom: 15px;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        width: fit-content;
+        margin: 0 auto;
     }
 
     .how-to-section p {
-        text-align: center;
         line-height: 1.6;
         margin-bottom: 10px;
+        width: fit-content;
+        margin: 0 auto;
     }
 
