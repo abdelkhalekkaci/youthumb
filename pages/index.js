@@ -35,11 +35,10 @@ const Index = () => {
         }
     };
 
-    const downloadThumbnail = (url) => {
-        const link = document.createElement('a');
-        link.href = url;
-        link.setAttribute('download', 'thumbnail.jpg');
-        link.click();
+    const openThumbnailInNewTab = (url) => {
+        const newTab = window.open(); // Open a new tab
+        newTab.document.write(`<img src="${url}" style="width: 100vw; height: 100vh; object-fit: contain;" />`);
+        // No need to create a link or trigger the download here
     };
 
     const handleBackToThumbnails = () => {
@@ -75,10 +74,10 @@ const Index = () => {
                             <img src={thumbnailOptions[selectedThumbnail].url} alt={`Thumbnail ${selectedThumbnail + 1}`} />
                             <button
                                 className="btn-blue mt-2"
-                                onClick={() => downloadThumbnail(thumbnailOptions[selectedThumbnail].url)}
+                                onClick={() => openThumbnailInNewTab(thumbnailOptions[selectedThumbnail].url)}
                                 type="button"
                             >
-                                Download Image
+                                View Fullscreen
                             </button>
                         </div>
                     ) : (
@@ -92,10 +91,10 @@ const Index = () => {
                                     />
                                     <button
                                         className="btn-blue mt-2"
-                                        onClick={() => downloadThumbnail(option.url)}
+                                        onClick={() => openThumbnailInNewTab(option.url)}
                                         type="button"
                                     >
-                                        Download Image
+                                        View Fullscreen
                                     </button>
                                 </div>
                             ))}
@@ -103,7 +102,6 @@ const Index = () => {
                     )}
                 </div>
             )}
-            {/* Updated section with new styling */}
             <section
                 className="how-to-section"
                 style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px' }}
@@ -112,12 +110,12 @@ const Index = () => {
                     How to Use Our Website
                 </h2>
                 <p className="text-gray-700" style={{ textAlign: 'left', lineHeight: '1.6', marginBottom: '10px' }}>
-                    To download a thumbnail,<br />
-                    First, enter a valid YouTube video URL in the input field above and click the "Download Thumbnails"
-                    button.<br />
-                    Once the thumbnail options appear below, click on a thumbnail to view it in full-screen mode. You can
-                    then click the "Download Image" button to download it. To return to the thumbnail options, click
-                    "Back".
+                    To acquire a thumbnail, follow these steps:<br />
+
+                    Enter a valid YouTube video URL into the provided input field.<br />
+                    Click the "Download Thumbnails" button to generate thumbnail options.<br />
+                    Once the thumbnail choices appear below, select your desired thumbnail by clicking the "View Fullscreen" button to view it in full-screen mode.<br />
+                    Save the displayed image by using the "Save Image As..." option.<br />
                 </p>
             </section>
         </div>
