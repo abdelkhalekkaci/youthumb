@@ -36,9 +36,10 @@ const Index = () => {
     };
 
     const openThumbnailInNewTab = (url) => {
-        const newTab = window.open(); // Open a new tab
-        newTab.document.write(`<img src="${url}" style="width: 100vw; height: 100vh; object-fit: contain;" />`);
-        // No need to create a link or trigger the download here
+        const newTab = window.open(url, '_blank');
+        if (newTab) {
+            newTab.focus();
+        }
     };
 
     const handleBackToThumbnails = () => {
