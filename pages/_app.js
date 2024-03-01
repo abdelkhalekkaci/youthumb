@@ -1,4 +1,4 @@
-import "../styles/index.css";
+import "../styles/Home.module.css";
 import { Fragment } from "react";
 import { DefaultSeo } from "next-seo";
 
