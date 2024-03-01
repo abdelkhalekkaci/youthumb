@@ -1,4 +1,4 @@
-/* Set the base font and background color for the entire app */
+﻿/* Set the base font and background color for the entire app */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
@@ -169,4 +169,7 @@ main {
         width: 100%;
         flex-direction: column;
     }
+}
+body
+{
 }
