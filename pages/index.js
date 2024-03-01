@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Head from 'next/head'; // Import Head component from next/head
+import styles from '../styles/Home.module.css';
 
 const Index = () => {
     const [videoURL, setVideoURL] = useState('');
@@ -47,7 +49,7 @@ const Index = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className={styles.container}>
             <Head>
                 <title>Fast & Free YouTube Thumbnail Downloader | Thumbnail Taker</title>
                 <meta name="description" content="Download high-quality thumbnails from YouTube videos quickly and for free with Thumbnail Taker. Perfect for bloggers, digital marketers, and video creators needing YouTube thumbnails." />
@@ -111,12 +113,12 @@ const Index = () => {
                 className="how-to-section"
                 style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}
             >
-                
+
                 <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
                     To acquire a thumbnail, follow these steps:
                 </h3>
                 <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
- 
+
                     Enter a valid YouTube video URL into the provided input field.<br />
                     Click the "Download Thumbnails" button to generate thumbnail options.<br />
                     Once the thumbnail choices appear below, select your desired thumbnail by clicking the "View Fullscreen" button.<br />
@@ -190,7 +192,6 @@ const Index = () => {
                     </div>
                 </main>
             </div>
-
         </div>
     );
 };
