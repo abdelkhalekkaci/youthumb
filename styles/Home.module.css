@@ -23,7 +23,7 @@
 }
 
 /* Style the input for the YouTube URL */
-input[type="text"] {
+.input[type="text"] {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -118,7 +118,7 @@ input[type="text"] {
     align-items: center;
 }
 
-main {
+.main {
     padding: 5rem 0;
     flex: 1;
     display: flex;
@@ -169,7 +169,4 @@ main {
         width: 100%;
         flex-direction: column;
     }
-}
-body
-{
 }
