@@ -109,7 +109,7 @@ const Index = () => {
             >
                 
                 <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
-                    To acquire a thumbnail, follow these steps:
+                    To acquire a YouTube thumbnail, follow these steps:
                 </h3>
                 <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
  
