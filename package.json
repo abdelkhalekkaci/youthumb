@@ -16,5 +16,8 @@
     "react-dom": "^18.2.0",
     "tailwindcss": "^2.2.19"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
 }
