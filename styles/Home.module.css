@@ -24,43 +24,38 @@
 
 /* Updated styles for the header */
 .header {
+    width: 100%; /* Make the header full-width */
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: red; /* Set header background color to red */
-    color: white; /* Set text color to white */
-    width: 100%; /* Ensure header takes full width */
-    position: fixed; /* Fix header position at the top */
-    top: 0; /* Align header to the top */
-    z-index: 1000; /* Set z-index to ensure header stays on top */
 }
 
-/* Style the logo image */
 .logo img {
-    width: 100px; /* Adjust as needed */
+    width: 100px; /* Adjust logo size as needed */
     height: auto;
 }
 
-/* Style the navigation links */
-.nav-links {
+.navLinks {
     list-style-type: none;
     display: flex;
 }
 
-    .nav-links li {
+    .navLinks li {
         margin-right: 1rem;
     }
 
-        .nav-links li:last-child {
+        .navLinks li:last-child {
             margin-right: 0;
         }
 
-        .nav-links li a {
+        .navLinks li span {
             color: #fff;
-            text-decoration: none;
-            cursor: pointer; /* Add cursor pointer for better user experience */
+            cursor: pointer;
         }
+
 
 
 /* Style the input for the YouTube URL */

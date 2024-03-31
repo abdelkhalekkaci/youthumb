@@ -1,37 +1,30 @@
 import Link from 'next/link';
-
+import styles from '../styles/Home.module.css';
 const Header = () => {
     return (
-        <header style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            padding: '1rem',
-            backgroundColor: '#333',
-            color: '#fff'
-        }}>
-            <div className="logo">
+        <header className={styles.header}>
+            <div className={styles.logo}>
                 <Link href="/">
                     <span>
-                        <img src="/logo.png" alt="Logo" style={{ width: '100px', height: 'auto' }} />
+                        <img src="/logo.png" alt="Logo" />
                     </span>
                 </Link>
             </div>
             <nav>
-                <ul style={{ listStyleType: 'none', display: 'flex' }}>
-                    <li style={{ marginRight: '1rem' }}>
+                <ul className={styles.navLinks}>
+                    <li>
                         <Link href="/">
-                            <span style={{ color: '#fff', cursor: 'pointer' }}>Home</span>
+                            <span>Home</span>
                         </Link>
                     </li>
-                    <li style={{ marginRight: '1rem' }}>
+                    <li>
                         <Link href="/about">
-                            <span style={{ color: '#fff', cursor: 'pointer' }}>About</span>
+                            <span>About</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/contact">
-                            <span style={{ color: '#fff', cursor: 'pointer' }}>Contact Us</span>
+                            <span>Contact Us</span>
                         </Link>
                     </li>
                 </ul>
