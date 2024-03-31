@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
     margin: 0;
-    padding: 0;
+    padding-top: 80px;
 }
 
 /* Center align the content in the container */
@@ -22,7 +22,6 @@
     margin-bottom: 20px; /* Add space between intro text and URL field */
 }
 
-/* Updated styles for the header */
 /* Styles for the header */
 .header {
     position: fixed;
@@ -73,11 +72,6 @@
             color: #333; /* Typography color */
             cursor: pointer;
         }
-
-/* Additional styling to hide the body content from overlapping with the header */
-body {
-    padding-top: 80px; /* Adjust as needed depending on header height */
-}
 
 
 /* Style the input for the YouTube URL */
