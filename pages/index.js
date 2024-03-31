@@ -134,7 +134,7 @@ const Index = () => {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <main className={styles.main}>
-                    <h1 className={styles.title}>Thumbnail Taker</h1>
+                    <h1 className={styles.title}>Frequently Asked Questions</h1>
                     <div className={styles.grid}>
                         <div className={styles.card}>
                             <section className="how-to-section" style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}>
