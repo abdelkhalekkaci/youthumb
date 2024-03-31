@@ -1,7 +1,6 @@
 import "../styles/Home.module.css";
 import { Fragment } from "react";
 import { DefaultSeo } from "next-seo";
-import Header from './Header';
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -17,7 +16,6 @@ function MyApp({ Component, pageProps }) {
                     site_name: "Youtube Thumbnail Downloader",
                 }}
             />
-            <Header /> {/* Include the Header component */}
             <Component {...pageProps} />
         </Fragment>
     );
