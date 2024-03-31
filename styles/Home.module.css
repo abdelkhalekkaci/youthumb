@@ -23,6 +23,7 @@
 }
 
 /* Updated styles for the header */
+/* Styles for the header */
 .header {
     position: fixed;
     top: 0;
@@ -72,6 +73,11 @@
             color: #333; /* Typography color */
             cursor: pointer;
         }
+
+/* Additional styling to hide the body content from overlapping with the header */
+body {
+    padding-top: 80px; /* Adjust as needed depending on header height */
+}
 
 
 /* Style the input for the YouTube URL */
