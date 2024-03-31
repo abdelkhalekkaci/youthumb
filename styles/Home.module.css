@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
     margin: 0;
-    padding-top: 2000px;
+    padding-top: 3000px;
 }
 
 /* Center align the content in the container */
@@ -35,15 +35,11 @@
     z-index: 1000;
     transition: background-color 0.3s ease;
     color: #333; /* Dark typography color */
-    padding: 0 40px; /* Padding on the left and right */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex; /* Ensure navigation links are aligned properly */
+    justify-content: space-between; /* Space evenly between logo and nav links */
+    align-items: center; /* Center align vertically */
 }
 
 .logo {
@@ -59,7 +55,7 @@
         margin-left: 1rem;
     }
 
-        .navLinks li:last-child {
+        .navLinks li:first-child {
             margin-left: auto; /* Push navigation links to the right */
         }
 
@@ -67,6 +63,7 @@
             color: #333; /* Dark typography color */
             cursor: pointer;
         }
+
 
 
 /* Style the input for the YouTube URL */
