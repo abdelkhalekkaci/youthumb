@@ -33,36 +33,46 @@
     padding: 20px 0;
     z-index: 1000;
     transition: background-color 0.3s ease;
+    color: #333; /* Typography color */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo img {
-    width: 100px;
-    height: auto;
+.logo {
+    flex: 1; /* Logo at the middle */
 }
+
+    .logo img {
+        width: 100px;
+        height: auto;
+    }
 
 .navLinks {
     list-style-type: none;
     display: flex;
+    justify-content: flex-end; /* Home on left, Contact Us and About on the right */
 }
 
     .navLinks li {
-        margin-right: 1rem;
+        margin-left: 1rem; /* Adjusted margin */
     }
 
-        .navLinks li:last-child {
-            margin-right: 0;
+        .navLinks li:first-child {
+            margin-left: 0; /* No margin for the first child (Home) */
         }
 
         .navLinks li span {
-            color: #fff;
+            color: #333; /* Typography color */
             cursor: pointer;
         }
+
 
 /* Style the input for the YouTube URL */
 .input[type="text"] {
