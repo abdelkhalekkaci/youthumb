@@ -1,10 +1,11 @@
 ﻿/* Set the base font and background color for the entire app */
 .body {
     font-family: Arial, sans-serif;
-    background-color: #f7fafc;
+    background-color: #f4f3ee; /* Updated background color */
     margin: 0;
     padding-top: 5000px;
 }
+
 
 /* Center align the content in the container */
 .container {

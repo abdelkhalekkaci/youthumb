@@ -57,8 +57,8 @@ const Index = () => {
             </Head>
             <Header /> {/* Include the Header component */}
             <header className="text-center mb-8" style={{ marginBottom: '20px' }}>
-                <h1 className="text-3xl font-bold mb-2" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '10px' }}>Youtube Thumbnail Downloader</h1>
-                <p className="text-gray-600" style={{ color: '#ccc', marginBottom: '10px' }}>Download high-quality thumbnails from YouTube videos.</p>
+                <h1 className="text-3xl font-bold mb-2" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '10px' }}>Thumbnail Taker</h1>
+                <p className="text-gray-600" style={{ color: '#090809', marginBottom: '10px' }}>Download high-quality thumbnails from YouTube videos.</p>
             </header>
             <div className="text-center">
                 <input
@@ -134,7 +134,7 @@ const Index = () => {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <main className={styles.main}>
-                    <h1 className={styles.title}>YouTube Thumbnail Downloader</h1>
+                    <h1 className={styles.title}>Thumbnail Taker</h1>
                     <div className={styles.grid}>
                         <div className={styles.card}>
                             <section className="how-to-section" style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}>
