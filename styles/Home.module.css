@@ -22,6 +22,45 @@
     margin-bottom: 20px; /* Add space between intro text and URL field */
 }
 
+/* Updated styles for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: red; /* Set header background color to red */
+    color: white; /* Set text color to white */
+    width: 100%; /* Ensure header takes full width */
+    position: fixed; /* Fix header position at the top */
+    top: 0; /* Align header to the top */
+    z-index: 1000; /* Set z-index to ensure header stays on top */
+}
+
+/* Style the logo image */
+.logo img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Style the navigation links */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+    nav ul li {
+        margin-right: 1rem;
+    }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
 /* Style the input for the YouTube URL */
 .input[type="text"] {
     padding: 0.5rem;
@@ -35,21 +74,22 @@
 
 /* Style the "Download Thumbnails" button */
 .btn-blue {
-    background-color: red;
-    color: white;
+    background-color: red; /* Set button background color to red */
+    color: white; /* Set button text color to white */
     font-weight: bold;
     padding: 0.5rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.2s;
-    width: 100%;
+    width: calc(100% - 12px); /* Adjust button width */
     max-width: 300px;
+    margin-top: 10px; /* Add margin to separate button from URL field */
     box-sizing: border-box;
 }
 
     .btn-blue:hover {
-        background-color: #cc0000;
+        background-color: #cc0000; /* Darken button color on hover */
     }
 
 /* Style the thumbnail options */

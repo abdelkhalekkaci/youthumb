@@ -56,9 +56,9 @@ const Index = () => {
                 <meta name="description" content="Download high-quality thumbnails from YouTube videos quickly and for free with Thumbnail Taker. Perfect for bloggers, digital marketers, and video creators needing YouTube thumbnails." />
             </Head>
             <Header /> {/* Include the Header component */}
-            <header className="text-center mb-8">
-                <h1 className="text-3xl font-bold mb-2">Youtube Thumbnail Downloader</h1>
-                <p className="text-gray-600">Download high-quality thumbnails from YouTube videos.</p>
+            <header className="text-center mb-8" style={{ marginBottom: '20px' }}>
+                <h1 className="text-3xl font-bold mb-2" style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '10px' }}>Youtube Thumbnail Downloader</h1>
+                <p className="text-gray-600" style={{ color: '#ccc', marginBottom: '10px' }}>Download high-quality thumbnails from YouTube videos.</p>
             </header>
             <div className="text-center">
                 <input
@@ -67,17 +67,18 @@ const Index = () => {
                     placeholder="Enter YouTube URL"
                     value={videoURL}
                     onChange={(e) => setVideoURL(e.target.value)}
+                    style={{ width: '100%', maxWidth: '300px', marginBottom: '10px', padding: '0.5rem', border: '1px solid #ccc', borderRadius: '4px' }}
                 />
-                <button className="btn-blue mt-2" onClick={() => getYouTubeThumbnail(videoURL)}>
+                <button className="btn-blue mt-2" onClick={() => getYouTubeThumbnail(videoURL)} style={{ backgroundColor: 'red', color: 'white', fontWeight: 'bold', padding: '0.5rem', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: 'background-color 0.2s', width: '100%', maxWidth: '300px' }}>
                     Download Thumbnails
                 </button>
             </div>
             {thumbnailOptions.length > 0 && (
                 <div className="mt-8">
-                    <h2 className="text-xl font-semibold mb-4">Thumbnail Options</h2>
+                    <h2 className="text-xl font-semibold mb-4" style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>Thumbnail Options</h2>
                     {selectedThumbnail !== null ? (
                         <div className="fullscreen-thumbnail">
-                            <button className="btn-blue mb-4" onClick={handleBackToThumbnails}>
+                            <button className="btn-blue mb-4" onClick={handleBackToThumbnails} style={{ backgroundColor: 'red', color: 'white', fontWeight: 'bold', padding: '0.5rem', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: 'background-color 0.2s' }}>
                                 Back
                             </button>
                             <img src={thumbnailOptions[selectedThumbnail].url} alt={`Thumbnail ${selectedThumbnail + 1}`} />
@@ -85,6 +86,7 @@ const Index = () => {
                                 className="btn-blue mt-2"
                                 onClick={() => openThumbnailInNewTab(thumbnailOptions[selectedThumbnail].url)}
                                 type="button"
+                                style={{ backgroundColor: 'red', color: 'white', fontWeight: 'bold', padding: '0.5rem', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: 'background-color 0.2s' }}
                             >
                                 View Fullscreen
                             </button>
@@ -102,6 +104,7 @@ const Index = () => {
                                         className="btn-blue mt-2"
                                         onClick={() => openThumbnailInNewTab(option.url)}
                                         type="button"
+                                        style={{ backgroundColor: 'red', color: 'white', fontWeight: 'bold', padding: '0.5rem', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: 'background-color 0.2s' }}
                                     >
                                         View Fullscreen
                                     </button>
