@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
     margin: 0;
-    padding-top: 100px;
+    padding-top: 1000px;
 }
 
 /* Center align the content in the container */
@@ -28,7 +28,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height:fit-content;
+    height: 40px;
     background-color: #fff; /* White background */
     border-bottom: 1px solid #333;
     padding: 10px 0;
