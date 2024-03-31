@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 /* Center align the content in the container */
@@ -28,22 +28,13 @@
     top: 0;
     left: 0;
     width: 100%;
+    height:fit-content;
     background-color: #fff; /* White background */
     border-bottom: 1px solid #333;
-    padding: 20px 0;
-    padding-bottom: 20px;
+    padding: 10px 0;
     z-index: 1000;
     transition: background-color 0.3s ease;
     color: #333; /* Dark typography color */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
