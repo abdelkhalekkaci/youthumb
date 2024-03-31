@@ -28,13 +28,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent;
-    border-bottom: 2px solid #333;
+    background-color: #fff; /* White background */
+    border-bottom: 1px solid #333;
     padding: 20px 0;
     padding-bottom: 20px;
     z-index: 1000;
     transition: background-color 0.3s ease;
-    color: #333; /* Typography color */
+    color: #333; /* Dark typography color */
 }
 
 .container {
@@ -58,21 +58,22 @@
 .navLinks {
     list-style-type: none;
     display: flex;
-    justify-content: flex-end; /* Home on left, Contact Us and About on the right */
+    justify-content: flex-end; /* Home on right, Contact Us and About on the left */
 }
 
     .navLinks li {
-        margin-left: 1rem; /* Adjusted margin */
+        margin-right: 1rem; /* Adjusted margin */
     }
 
-        .navLinks li:first-child {
-            margin-left: 0; /* No margin for the first child (Home) */
+        .navLinks li:last-child {
+            margin-right: 0; /* No margin for the last child (Contact Us) */
         }
 
         .navLinks li span {
             color: #333; /* Typography color */
             cursor: pointer;
         }
+
 
 
 /* Style the input for the YouTube URL */
