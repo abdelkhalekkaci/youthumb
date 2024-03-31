@@ -24,39 +24,46 @@
 
 /* Updated styles for the header */
 .header {
-    width: 100%; /* Make the header full-width */
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 2px solid #333;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo img {
-    width: 100px; /* Adjust logo size as needed */
+    width: 100px;
     height: auto;
 }
 
-.navLinks {
+nav ul {
     list-style-type: none;
     display: flex;
 }
 
-    .navLinks li {
+    nav ul li {
         margin-right: 1rem;
     }
 
-        .navLinks li:last-child {
+        nav ul li:last-child {
             margin-right: 0;
         }
 
-        .navLinks li span {
+        nav ul li span {
             color: #fff;
+            text-decoration: none;
             cursor: pointer;
         }
-
-
 
 /* Style the input for the YouTube URL */
 .input[type="text"] {
