@@ -46,22 +46,21 @@
     height: auto;
 }
 
-nav ul {
+.navLinks {
     list-style-type: none;
     display: flex;
 }
 
-    nav ul li {
+    .navLinks li {
         margin-right: 1rem;
     }
 
-        nav ul li:last-child {
+        .navLinks li:last-child {
             margin-right: 0;
         }
 
-        nav ul li span {
+        .navLinks li span {
             color: #fff;
-            text-decoration: none;
             cursor: pointer;
         }
 
