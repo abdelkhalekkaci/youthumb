@@ -137,54 +137,55 @@ const Index = () => {
                     <h1 className={styles.title}>YouTube Thumbnail Downloader</h1>
                     <div className={styles.grid}>
                         <div className={styles.card}>
-                            <p className={styles.question}>What YouTube Thumbnail Quality You Will Get?</p>
-                            <p>
-                                Download free, high-quality thumbnails of any YouTube video in Full HD (1080p), HD (720p), standard definition (SD), and smaller sizes. it works with the following formats: HD, HQ, 1080p, and 4K videos on YouTube.
-                            </p>
-                            <p>
-                                The quality of the saved thumbnails is something that users often think about a lot. YouTube Thumbnail Downloader makes sure that users can access high-resolution pictures that keep the clarity and visual appeal that are important for getting people's attention. The tool extracts thumbnails in different sizes, so it used for a range of tasks.
-                            </p>
-                        </div>
-                        <div className={styles.card}>
-                            <p className={styles.question}>What is the Use of This YouTube Thumbnail Grabber Website?</p>
-                            <p>
-                                The primary purpose of YouTube Thumbnail Downloader is to provide users with a convenient way to obtain YouTube video thumbnails. Content creators can benefit from this tool by using the downloaded thumbnails for promotional materials, video previews, or even incorporating them into their own content. Marketers can leverage it for creating eye-catching advertisements, and enthusiasts can use it for personal collections or creative projects.
-                            </p>
-                        </div>
-                        <div className={styles.card}>
-                            <p className={styles.question}>How to Download YouTube Thumbnail in a Few Seconds?</p>
-                            <p>
-                                The efficiency of YouTube Thumbnail Downloader is highlighted by its ability to provide users with the desired thumbnails in just a few seconds. The streamlined process ensures that users can quickly access and download the thumbnails they need, saving time and enhancing their workflow.
-                            </p>
-                        </div>
-                        <div className={styles.card}>
-                            <p className={styles.question}>Is It Legal to Download YouTube Thumbnails?</p>
-                            <p>
-                                Downloading YouTube thumbnails for personal use or creative projects is generally considered legal. However, it's crucial to respect copyright and intellectual property rights. Users should refrain from using downloaded thumbnails for any unlawful or unethical purposes, such as misrepresentation or unauthorized commercial use.
-                            </p>
-                        </div>
-                        <div className={styles.card}>
-                            <p className={styles.question}>Is The YouTube Thumbnail Downloader Free or Paid?</p>
-                            <p>
-                                YouTube Thumbnail Downloader is designed to be user-friendly and accessible to everyone. The majority of these tools are available for free, allowing users to enjoy the benefits without any financial commitment. However, some platforms may offer additional features or advanced options through premium versions, which might come with a cost.
-                            </p>
-                        </div>
-                        <div className={styles.card}>
-                            <p className={styles.question}>Is There Any Copyright Risk on YouTube Thumbnails?</p>
-                            <p>
-                                While downloading YouTube thumbnails for personal use is generally considered legal, users should be cautious about potential copyright risks. If the thumbnail includes copyrighted material or trademarks belonging to others, it's essential to seek permission or ensure that the usage falls within the boundaries of fair use. Using thumbnails for commercial purposes without proper authorization can lead to copyright infringement issues.
-                            </p>
-                        </div>
-                        <div className={styles.card}>
-                            <p>
-                                <strong>Conclusion</strong>
-                            </p>
-                            <p>
-                                In conclusion, Thumbnail Taker is a valuable tool for content creators, marketers, and enthusiasts alike. By offering a quick and efficient way to download high-quality thumbnails, it enhances the visual appeal of content and provides endless possibilities for creativity. Users should, however, be mindful of legal considerations and ensure that their use of downloaded thumbnails aligns with ethical and legal standards. With the right approach, YouTube Thumbnail Downloader becomes a versatile asset in the digital landscape, unlocking the potential for captivating and engaging content.
-                            </p>
+                            <section className="how-to-section" style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}>
+                                <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
+                                    What YouTube Thumbnail Quality You Will Get?
+                                </h3>
+                                <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
+                                    Download free, high-quality thumbnails of any YouTube video in Full HD (1080p), HD (720p), standard definition (SD), and smaller sizes. it works with the following formats: HD, HQ, 1080p, and 4K videos on YouTube.
+                                    <br />
+                                    The quality of the saved thumbnails is something that users often think about a lot. YouTube Thumbnail Downloader makes sure that users can access high-resolution pictures that keep the clarity and visual appeal that are important for getting people's attention. The tool extracts thumbnails in different sizes, so it used for a range of tasks.
+                                </p>
+
+                                <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
+                                    What is the Use of This YouTube Thumbnail Grabber Website?
+                                </h3>
+                                <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
+                                    The primary purpose of YouTube Thumbnail Downloader is to provide users with a convenient way to obtain YouTube video thumbnails. Content creators can benefit from this tool by using the downloaded thumbnails for promotional materials, video previews, or even incorporating them into their own content. Marketers can leverage it for creating eye-catching advertisements, and enthusiasts can use it for personal collections or creative projects.
+                                </p>
+
+                                <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
+                                    Is It Legal to Download YouTube Thumbnails?
+                                </h3>
+                                <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
+                                    Downloading YouTube thumbnails for personal use or creative projects is generally considered legal. However, it's crucial to respect copyright and intellectual property rights. Users should refrain from using downloaded thumbnails for any unlawful or unethical purposes, such as misrepresentation or unauthorized commercial use.
+                                </p>
+
+                                <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
+                                    Is The YouTube Thumbnail Downloader Free or Paid?
+                                </h3>
+                                <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
+                                    YouTube Thumbnail Downloader is designed to be user-friendly and accessible to everyone. The majority of these tools are available for free, allowing users to enjoy the benefits without any financial commitment. However, some platforms may offer additional features or advanced options through premium versions, which might come with a cost.
+                                </p>
+
+                                <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
+                                    Is There Any Copyright Risk on YouTube Thumbnails?
+                                </h3>
+                                <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
+                                    While downloading YouTube thumbnails for personal use is generally considered legal, users should be cautious about potential copyright risks. If the thumbnail includes copyrighted material or trademarks belonging to others, it's essential to seek permission or ensure that the usage falls within the boundaries of fair use. Using thumbnails for commercial purposes without proper authorization can lead to copyright infringement issues.
+                                </p>
+
+                                <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
+                                    Conclusion
+                                </h3>
+                                <p className="text-gray-700" style={{ lineHeight: '1.6', marginBottom: '10px', width: 'fit-content', margin: '0 auto' }}>
+                                    In conclusion, Thumbnail Taker is a valuable tool for content creators, marketers, and enthusiasts alike. By offering a quick and efficient way to download high-quality thumbnails, it enhances the visual appeal of content and provides endless possibilities for creativity. Users should, however, be mindful of legal considerations and ensure that their use of downloaded thumbnails aligns with ethical and legal standards. With the right approach, YouTube Thumbnail Downloader becomes a versatile asset in the digital landscape, unlocking the potential for captivating and engaging content.
+                                </p>
+                            </section>
                         </div>
                     </div>
                 </main>
+
             </div>
         </div>
     );

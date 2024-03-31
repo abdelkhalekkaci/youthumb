@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
     background-color: #f7fafc;
     margin: 0;
-    padding-top: 3000px;
+    padding-top: 5000px;
 }
 
 /* Center align the content in the container */
@@ -29,21 +29,19 @@
     left: 0;
     width: 100%;
     background-color: #fff; /* White background */
-    border-bottom: 2px solid #333;
-    height: 60px; /* Height of the header */
+    border-bottom: 1.5px solid #333;
+    height: 40px; /* Height of the header */
     line-height: 40px; /* Vertically center content */
     z-index: 1000;
     transition: background-color 0.3s ease;
     color: #333; /* Dark typography color */
-    padding-left: 40px;
-    padding-right: 40px;
     display: flex; /* Ensure navigation links are aligned properly */
-    justify-content: space-between; /* Space evenly between logo and nav links */
+    justify-content: center;
     align-items: center; /* Center align vertically */
 }
 
 .logo {
-    flex: 0 0 auto; /* Prevent logo from growing */
+    margin-right: 200px;
 }
 
 .navLinks {
