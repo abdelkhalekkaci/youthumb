@@ -59,7 +59,7 @@
         margin-left: 1rem;
     }
 
-        .navLinks li:first-child {
+        .navLinks li:last-child {
             margin-left: auto; /* Push navigation links to the right */
         }
 
