@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 
 const Header = () => {
@@ -6,26 +5,26 @@ const Header = () => {
         <header>
             <div className="logo">
                 <Link href="/">
-                    <a>
+                    <span>
                         <img src="/logo.png" alt="Logo" />
-                    </a>
+                    </span>
                 </Link>
             </div>
             <nav>
                 <ul>
                     <li>
                         <Link href="/">
-                            <a>Home</a>
+                            <span>Home</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/about">
-                            <a>About</a>
+                            <span>About</span>
                         </Link>
                     </li>
                     <li>
                         <Link href="/contact">
-                            <a>Contact Us</a>
+                            <span>Contact Us</span>
                         </Link>
                     </li>
                 </ul>
@@ -53,9 +52,10 @@ const Header = () => {
         nav ul li:last-child {
           margin-right: 0;
         }
-        nav ul li a {
+        nav ul li span {
           color: #fff;
           text-decoration: none;
+          cursor: pointer; /* Add cursor pointer for better user experience */
         }
       `}</style>
         </header>
