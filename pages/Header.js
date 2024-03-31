@@ -1,5 +1,3 @@
-// JavaScript source code
-// components/Header.js
 
 import Link from 'next/link';
 
