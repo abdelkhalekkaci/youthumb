@@ -6,7 +6,6 @@
     padding-top: 5000px;
 }
 
-
 /* Center align the content in the container */
 .container {
     display: flex;
@@ -42,12 +41,13 @@
 }
 
 .logo {
-    margin-right: 200px;
+    margin-right: 10px; /* Adjust margin between logo and navigation links */
 }
 
 .navLinks {
     list-style-type: none;
     display: flex;
+    margin-left: auto; /* Push navigation links to the right */
 }
 
     .navLinks li {
@@ -55,15 +55,13 @@
     }
 
         .navLinks li:first-child {
-            margin-left: auto; /* Push navigation links to the right */
+            margin-left: 0; /* No margin for the first child */
         }
 
         .navLinks li span {
             color: #333; /* Dark typography color */
             cursor: pointer;
         }
-
-
 
 /* Style the input for the YouTube URL */
 .input[type="text"] {
