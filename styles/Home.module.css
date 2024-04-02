@@ -149,10 +149,17 @@
         margin: 0 auto;
     }
 
-/* Responsive styles */
-@media (max-width: 600px) {
-    .grid {
-        width: 100%;
-        flex-direction: column;
+    /* Additional styles for Frequently Asked Questions section */
+    .how-to-section h3 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        width: fit-content;
+        margin: 0 auto;
     }
-}
+
+    .how-to-section p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+        width: fit-content;
+        margin: 0 auto;
+    }
