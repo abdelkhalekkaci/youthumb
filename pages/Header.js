@@ -6,26 +6,26 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.logo}>
                 <Link href="/" passHref>
-                    <a>
-                        <img src="/logo.png" alt="Logo" />
-                    </a>
+
+                    <img src="/logo.png" alt="Logo" />
+
                 </Link>
             </div>
             <nav>
                 <ul className={styles.navLinks}>
                     <li>
                         <Link href="/" passHref>
-                            <a>Home</a>
+                            Home
                         </Link>
                     </li>
                     <li>
                         <Link href="/about" passHref>
-                            <a>About Us</a>
+                            About Us
                         </Link>
                     </li>
                     <li>
                         <Link href="/contact" passHref>
-                            <a>Contact Us</a>
+                            Contact Us
                         </Link>
                     </li>
                 </ul>
