@@ -1,30 +1,31 @@
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+
 const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
                 <Link href="/">
-                    <span>
+                    <a>
                         <img src="/logo.png" alt="Logo" />
-                    </span>
+                    </a>
                 </Link>
             </div>
             <nav>
                 <ul className={styles.navLinks}>
                     <li>
                         <Link href="/">
-                            <span>Home</span>
+                            <a>Home</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about">
-                            <span>About</span>
+                        <Link href="/AboutUs">
+                            <a>About Us</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact">
-                            <span>Contact Us</span>
+                        <Link href="/ContactUs">
+                            <a>Contact Us</a>
                         </Link>
                     </li>
                 </ul>
