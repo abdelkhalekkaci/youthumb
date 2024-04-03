@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <Link href="/">
+                <Link href="/" passHref>
                     <a>
                         <img src="/logo.png" alt="Logo" />
                     </a>
@@ -14,17 +14,17 @@ const Header = () => {
             <nav>
                 <ul className={styles.navLinks}>
                     <li>
-                        <Link href="/">
+                        <Link href="/" passHref>
                             <a>Home</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about">
+                        <Link href="/about" passHref>
                             <a>About Us</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact">
+                        <Link href="/contact" passHref>
                             <a>Contact Us</a>
                         </Link>
                     </li>
