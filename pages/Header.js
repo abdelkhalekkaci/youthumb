@@ -19,12 +19,12 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/AboutUs">
+                        <Link href="/about">
                             <a>About Us</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href="/ContactUs">
+                        <Link href="/contact">
                             <a>Contact Us</a>
                         </Link>
                     </li>
