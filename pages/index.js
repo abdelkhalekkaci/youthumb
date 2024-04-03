@@ -116,7 +116,7 @@ const Index = () => {
             )}
             <section
                 className="how-to-section"
-                style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}
+                style={{ backgroundColor: '#FFFFFF', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}
             >
                 <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
                     To acquire a YouTube thumbnail, follow these steps:
@@ -137,7 +137,7 @@ const Index = () => {
                     <h1 className={styles.title}>Frequently Asked Questions</h1>
                     <div className={styles.grid}>
                         <div className={styles.card}>
-                            <section className="how-to-section" style={{ backgroundColor: '#f5f5f5', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}>
+                            <section className="how-to-section" style={{ backgroundColor: '#FFFFFF', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}>
                                 <h3 className="text-gray-700" style={{ fontSize: '1rem', marginBottom: '1rem', width: 'fit-content', margin: '0 auto' }}>
                                     What YouTube Thumbnail Quality You Will Get?
                                 </h3>
