@@ -1,8 +1,15 @@
-import "../styles/Home.module.css";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { DefaultSeo } from "next-seo";
+import ReactGA from 'react-ga'; // Import react-ga
 
 function MyApp({ Component, pageProps }) {
+    useEffect(() => {
+        // Initialize Google Analytics
+        ReactGA.initialize('G-YPC8R7PHT4');
+        // Track initial page view
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }, []);
+
     return (
         <Fragment>
             <DefaultSeo
