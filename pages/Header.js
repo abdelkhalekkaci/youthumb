@@ -6,9 +6,7 @@ const Header = () => {
         <header className={styles.header}>
             <div className={styles.logo}>
                 <Link href="/" passHref>
-
                     <img src="/logo.png" alt="Logo" />
-
                 </Link>
             </div>
             <nav>
