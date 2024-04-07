@@ -54,6 +54,8 @@ const Index = () => {
             <Head>
                 <title>Fast & Free YouTube Thumbnail Downloader | Thumbnail Taker</title>
                 <meta name="description" content="Download high-quality thumbnails from YouTube videos quickly and for free with Thumbnail Taker. Perfect for bloggers, digital marketers, and video creators needing YouTube thumbnails." />
+                {/* Google Ads code */}
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3751479720121399" crossorigin="anonymous"></script>
             </Head>
             <Header /> {/* Include the Header component */}
             <header className="text-center mb-8" style={{ marginBottom: '20px' }}>
