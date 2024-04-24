@@ -56,6 +56,17 @@ const Index = () => {
                 <meta name="description" content="Download high-quality thumbnails from YouTube videos quickly and for free with Thumbnail Taker. Perfect for bloggers, digital marketers, and video creators needing YouTube thumbnails." />
                 {/* Google Ads code */}
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3751479720121399" crossorigin="anonymous"></script>
+                {/* Google Analytics code */}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPC8R7PHT4"></script>
+                <script dangerouslySetInnerHTML={{
+                    __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-YPC8R7PHT4');
+                    `
+                }} />
             </Head>
             <Header /> {/* Include the Header component */}
             <header className="text-center mb-8" style={{ marginBottom: '20px' }}>
