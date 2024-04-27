@@ -198,7 +198,9 @@ const Index = () => {
                         </div>
                     </div>
                 </main>
-
+                {/* Adsterra Ad Unit Code */}
+                <script async="async" data-cfasync="false" src="//pl23159716.highcpmgate.com/344e76fdb1e31e4d7b2669637036cf1e/invoke.js"></script>
+                <div id="container-344e76fdb1e31e4d7b2669637036cf1e"></div>
             </div>
         </div>
     );
