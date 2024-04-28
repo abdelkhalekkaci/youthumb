@@ -146,6 +146,9 @@ const Index = () => {
                     <title>YouThumb - YouTube Thumbnail Downloader</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
+                {/* Adsterra Ad Unit Code */}
+                <script async="async" data-cfasync="false" src="//pl23159716.highcpmgate.com/344e76fdb1e31e4d7b2669637036cf1e/invoke.js"></script>
+                <div id="container-344e76fdb1e31e4d7b2669637036cf1e"></div>
                 <main className={styles.main}>
                     <h1 className={styles.title}>Frequently Asked Questions</h1>
                     <div className={styles.grid}>
@@ -198,9 +201,6 @@ const Index = () => {
                         </div>
                     </div>
                 </main>
-                {/* Adsterra Ad Unit Code */}
-                <script async="async" data-cfasync="false" src="//pl23159716.highcpmgate.com/344e76fdb1e31e4d7b2669637036cf1e/invoke.js"></script>
-                <div id="container-344e76fdb1e31e4d7b2669637036cf1e"></div>
             </div>
         </div>
     );
