@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head'; // Import Head component from next/head
+import Script from 'next/script'; // Import Script component from next/script
 import Header from './Header';
 import styles from '../styles/Home.module.css';
 
@@ -54,19 +55,6 @@ const Index = () => {
             <Head>
                 <title>Fast & Free YouTube Thumbnail Downloader | Thumbnail Taker</title>
                 <meta name="description" content="Download high-quality thumbnails from YouTube videos quickly and for free with Thumbnail Taker. Perfect for bloggers, digital marketers, and video creators needing YouTube thumbnails." />
-                {/* Google Ads code */}
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3751479720121399" crossorigin="anonymous"></script>
-                {/* Google Analytics code */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPC8R7PHT4"></script>
-                <script dangerouslySetInnerHTML={{
-                    __html: `
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-
-                        gtag('config', 'G-YPC8R7PHT4');
-                    `
-                }} />
             </Head>
             <Header /> {/* Include the Header component */}
             <header className="text-center mb-8" style={{ marginBottom: '20px' }}>
@@ -127,9 +115,7 @@ const Index = () => {
                     )}
                 </div>
             )}
-            {/* Adsterra Ad Unit Code */}
-            <script async="async" data-cfasync="false" src="//pl23159716.highcpmgate.com/344e76fdb1e31e4d7b2669637036cf1e/invoke.js"></script>
-            <div id="container-344e76fdb1e31e4d7b2669637036cf1e"></div>
+
             <section
                 className="how-to-section"
                 style={{ backgroundColor: '#FFFFFF', padding: '20px', borderRadius: '8px', marginTop: '20px', textAlign: 'center' }}
@@ -149,7 +135,24 @@ const Index = () => {
                     <title>YouThumb - YouTube Thumbnail Downloader</title>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                
+                <Script
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3751479720121399"
+                    strategy="beforeInteractive"
+                />
+                <Script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-YPC8R7PHT4"
+                    strategy="beforeInteractive"
+                />
+                {/* Adsterra Ad Unit Code */}
+                <Script
+                    async
+                    data-cfasync="false"
+                    src="//pl23159716.highcpmgate.com/344e76fdb1e31e4d7b2669637036cf1e/invoke.js"
+                    strategy="beforeInteractive"
+                />
+                <div id="container-344e76fdb1e31e4d7b2669637036cf1e"></div>
                 <main className={styles.main}>
                     <h1 className={styles.title}>Frequently Asked Questions</h1>
                     <div className={styles.grid}>
